@@ -135,6 +135,7 @@ h2 {
     margin: 1em;
     text-align: center;
     font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para darle profundidad */
 }
 
 .skill i {
@@ -155,7 +156,6 @@ h2 {
     transition: transform 0.3s ease;
     text-align: center;
     font-size: 1.2em;
-    /* background-color: #f9f9f96e; Fondo claro para mejor visibilidad */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para darle profundidad */
 }
 
@@ -163,48 +163,45 @@ h2 {
     transform: translateY(-10px);
 }
 
-#contacto form {
-    background: #292929;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contacto .form-group {
-    margin-bottom: 1.5em;
-}
-
-#contacto label {
-    display: block;
-    margin-bottom: 0.5em;
-    color: #bbb;
-}
-
-#contacto input, #contacto textarea {
-    width: 100%;
-    padding: 0.8em;
-    border-radius: 5px;
-    border: none;
+/* Contacto */
+#contacto {
     background: #1e1e1e;
-    color: #fff;
+    padding: 40px 0;
+    /* text-align: center; */
+    margin-left:30%;
+    margin-right:30%;
+    border-radius: 10px;
+    /* Añadir sombra para darle profundidad */
 }
 
-#contacto button {
-    background-color: #0066ff;
-    padding: 0.8em 2em;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+
+.contact-info {
+    font-size: 1.2em;
+    line-height: 2;
 }
 
-#contacto button:hover {
-    background-color: #0052cc;
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #555;
 }
 
+.contact-info i {
+    margin-right: 10px;
+    color: #0073b1;
+}
+
+.contact-info a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
 footer {
     text-align: center;
     padding: 2em 0;
