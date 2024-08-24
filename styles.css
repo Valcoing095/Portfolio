@@ -142,6 +142,26 @@ h2 {
     margin-bottom: 0.5em;
     color: #66b2ff;
 }
+/* Validar antes de hacer push */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.project-item {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    font-size: 1.2em;
+    /* background-color: #f9f9f96e; Fondo claro para mejor visibilidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para darle profundidad */
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
 
 #contacto form {
     background: #292929;
