@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Yeison Alexis Velasco Trejos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yeison Alexis Velasco Trejos</h1>
+            <p>Desarrollador Backend</p>
+            <nav>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Crea soluciones innovadoras para problemas cotidianos</h2>
+            <p>Especializado en Node.js, Laravel y Angular</p>
+            <div class="buttons">
+                <a href="#proyectos" class="btn">Ver Proyectos</a>
+                <a href="#contacto" class="btn">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia">
+        <div class="container">
+            <h2>Experiencia Profesional</h2>
+            <div class="cards">
+                <div class="card experience-item">
+                    <h3>Analista y Desarrollador de Sistemas - Chevrolet Caminos</h3>
+                    <p><em>Pereira, Colombia | 2021 - Presente</em></p>
+                    <ul>
+                        <li>Mantenimiento de sistema Inhouse en Visual Basic y optimización continua.</li>
+                        <li>Desarrollo de sistema de facturación electrónica en PHP conforme a las regulaciones fiscales vigentes.</li>
+                        <li>Migración de módulos de Visual Basic 6.0 a Laravel, mejorando rendimiento y calidad.</li>
+                        <li>Integración de pasarela de pagos Wompy en aplicaciones existentes, garantizando transacciones seguras.</li>
+                        <li>Desarrollo de plataforma de seguros en Node.js, incluyendo webhooks para comunicación en tiempo real.</li>
+                        <li>Creación y automatización de informes personalizados en MySQL, optimizando la extracción y análisis de datos.</li>
+                    </ul>
+                </div>
+                <div class="card experience-item">
+                    <h3>Desarrollador Frontend - Tencoparque</h3>
+                    <p><em>Pereira, Colombia | Julio 2020 - Marzo 2021</em></p>
+                    <ul>
+                        <li>Análisis de requerimientos y documentación de requisitos funcionales y no funcionales.</li>
+                        <li>Desarrollo de sistemas adaptados a las necesidades del cliente, implementando componentes reutilizables y modulares.</li>
+                        <li>Pruebas exhaustivas y depuración de aplicaciones web y móviles híbridas, garantizando un funcionamiento óptimo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container">
+            <h2>Proyectos Recientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Cafetería Web</h3>
+                    <p>Sistema que permite gestionar el inventario de una cafetería, desarrollado con tecnologías web modernas.</p>
+                    <a href="https://github.com/Valcoing095/Cafeteria-web" target="_blank">Ver en GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Finnazz Web</h3>
+                    <p>Sistema para la gestión financiera de usuarios, con enfoque en la experiencia del usuario.</p>
+                    <a href="https://github.com/Valcoing095/FinazzWeb" target="_blank">Ver en GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Finnazz API</h3>
+                    <p>API para la gestión financiera de usuarios, desarrollada utilizando Node.js y Express.</p>
+                    <a href="https://github.com/Valcoing095/finanzz-api" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="container">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills">
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-php"></i>
+                    <p>PHP</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-laravel"></i>
+                    <p>Laravel</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-node-js"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-docker"></i>
+                    <p>Docker</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-linux"></i>
+                    <p>Linux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="user_email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yeison Alexis Velasco Trejos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("yvelasco321@gmail.com"); // Reemplaza TU_USER_ID con tu User ID de EmailJS
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir que se envíe el formulario de la manera tradicional
+
+        // Estos valores deben coincidir con los de tu Template ID en EmailJS
+        emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
+            .then(function() {
+                alert('Mensaje enviado!');
+            }, function(error) {
+                alert('Fallo en el envío del mensaje: ' + JSON.stringify(error));
+            });
+    });
+</script>
+</html>
+
+
