@@ -11,6 +11,9 @@ export default {
             sans: ['Roboto', ...defaultTheme.fontFamily.sans],
             header: ['Lato', 'sans-serif']
         },
+        colors:{
+            'custom-blue':'#60A5FA'
+        }
       },
     },
     plugins: [],
