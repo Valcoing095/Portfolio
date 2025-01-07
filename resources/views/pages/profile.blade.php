@@ -51,7 +51,7 @@
               </div>
 
             <!-- Contenido de Profesional -->
-            <div id="profesional" class="hidden mt-6">
+            <div id="profesional" class=" mt-6">
                 <article class="bg-yellow-50 shadow-lg rounded-xl p-6 text-left mt-6 border border-gray-200 relative">
                     <!-- Rango de fechas -->
                     <span class="absolute top-2 left-4  text-sm font-medium text-gray-500">
@@ -172,9 +172,12 @@
                             </div>
                         </div>
                         <!-- Enlace al proyecto -->
-                        <a href="https://agenxi.com/" target="_blank" class="text-yellow-600 font-semibold mt-4 block hover:underline text-center">
-                            Visitar página web
-                        </a>
+
+                        <div class="flex space-x-4 justify-center mt-4">
+                            <a href="https://agenxi.com/" target="_blank" target="_blank"  class="bg-yellow-600 text-white px-4 py-2 rounded-full font-semibold inactive">
+                                Visitar página web
+                            </a>
+                        </div>
                     </article>
 
                     <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
@@ -194,9 +197,11 @@
                             </div>
                         </div>
                         <!-- Botón Ver más -->
-                        <a href="https://github.com/Valcoing095/Cafeteria-web" target="_blank" class="text-yellow-600 font-semibold mt-4 block hover:underline text-center">
-                            Ver en Github
-                        </a>
+                        <div class="flex space-x-4 justify-center mt-4">
+                            <a href="https://github.com/Valcoing095/Cafeteria-web" target="_blank"  class="bg-yellow-600 text-white px-4 py-2 rounded-full font-semibold inactive">
+                              github
+                            </a>
+                        </div>
                     </article>
 
                     <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
@@ -260,6 +265,29 @@
                             </a>
                         </div>
                     </article>
+                    <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
+                        <!-- Etiqueta decorativa -->
+                        <span class="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold py-1 px-3 rounded-bl-lg">
+                            En desarrollo
+                        </span>
+                        <!-- Contenido del artículo -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2 text-yellow-700 text-center">Proyecto Hand Academy</h3>
+                            <p class="text-gray-700 text-justify">Actualmente formo parte del desarrollo de un sistema de entrenamiento canino, desempeñándome como responsable del backend. Dado que el proyecto aún se encuentra en desarrollo, no se proporcionarán enlaces a repositorios de GitHub ni demostraciones públicas en esta etapa.</p>
+                        </div>
+                        <!-- Tecnologías utilizadas -->
+                        <div class="flex justify-center mt-4 gap-4">
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="Nestjs" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="Postgresql" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Nodejs" class="w-8 h-8">
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -269,6 +297,86 @@
                 Estudios
             </h1>
         </section>
+        <br>
+        <section class="mt-6 text-center">
+            <h1 class="text-3xl font-bold inline-block border-b-4 border-yellow-100 hover:border-yellow-400 px-4">
+                Contactame
+            </h1>
+
+            <form class="mt-8 max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">
+                        Nombre
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                        placeholder="Tu nombre"
+                    />
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
+                        Correo Electrónico
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                        placeholder="Tu correo electrónico"
+                    />
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">
+                        Mensaje
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                        placeholder="Escribe tu mensaje aquí..."
+                    ></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button
+                        type="submit"
+                        class="bg-yellow-400 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+                    >
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </section>
+        <footer class="bg-yellow-50 shadow-lg rounded-xl p-6 mt-12 border border-gray-200 relative">
+            <!-- Encabezado -->
+            <div class="flex flex-col items-center text-center">
+              <!-- Logo y Nombre -->
+              <div class="flex justify-center items-center space-x-2 mb-4">
+                <div class="bg-white text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+                  Y
+                </div>
+                <h1 class="text-2xl font-bold text-yellow-700">Yeison Velasco</h1>
+              </div>
+
+              <!-- Mensaje -->
+              <p class="text-gray-600 text-sm">
+                Gracias por visitar mi sitio web. Espero que podamos trabajar juntos en proyectos interesantes.
+              </p>
+            </div>
+            <!-- Derechos reservados -->
+            <div class="mt-8 border-t border-gray-300 pt-4 text-center">
+              <p class="text-xs text-gray-500">
+                &copy; 2024 Yeison Velasco. Todos los derechos reservados.
+              </p>
+            </div>
+          </footer>
+
     </div>
     <style>
         .inactive {
