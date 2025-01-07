@@ -52,11 +52,22 @@
 
             <!-- Contenido de Profesional -->
             <div id="profesional" class="hidden mt-6">
-                <article class="bg-white shadow-md rounded-lg p-6 text-left mt-6">
-                    <h2 class="text-xl font-semibold mb-2 text-yellow-700">
-                        Analista y Desarrollador de Sistemas - Chevrolet Caminos
+                <article class="bg-yellow-50 shadow-lg rounded-xl p-6 text-left mt-6 border border-gray-200 relative">
+                    <!-- Rango de fechas -->
+                    <span class="absolute top-2 left-4  text-sm font-medium text-gray-500">
+                        2021 — Actual
+                    </span>
+
+                    <!-- Título del puesto -->
+                    <h2 class="text-lg font-semibold mb-1 text-yellow-700">
+                        Analista y Desarrollador de Sistemas · Chevrolet Caminos
                     </h2>
-                    <ul class="list-disc list-inside space-y-2">
+                    <p class="text-sm text-gray-600 mb-4">
+                        Desarrollador Backend y mantenimiento de sistemas.
+                    </p>
+
+                    <!-- Lista de responsabilidades -->
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Mantenimiento de sistema Inhouse en Visual Basic y optimización continua.</li>
                         <li>Desarrollo de sistema de facturación electrónica en PHP conforme a las regulaciones fiscales vigentes.</li>
                         <li>Migración de módulos de Visual Basic 6.0 a Laravel, mejorando rendimiento y calidad.</li>
@@ -64,18 +75,71 @@
                         <li>Desarrollo de plataforma de seguros en Node.js, incluyendo webhooks para comunicación en tiempo real.</li>
                         <li>Creación y automatización de informes personalizados en MySQL, optimizando la extracción y análisis de datos.</li>
                     </ul>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            PHP
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Laravel
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Visual Basic
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Node.js
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            MySQL
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Wompy
+                        </span>
+                    </div>
                 </article>
-                <article class="bg-white shadow-md rounded-lg p-6 text-left mt-6">
-                    <h2 class="text-xl font-semibold mb-2 text-yellow-700">
-                        Desarrollador Frontend - Tencoparque
+
+                <article class="bg-yellow-50 shadow-lg rounded-xl p-6 text-left mt-6 border border-gray-200 relative">
+                    <!-- Rango de fechas -->
+                    <span class="absolute top-2 left-4 text-sm font-medium text-gray-500">
+                        2020 — 2021
+                    </span>
+
+                    <!-- Título del puesto -->
+                    <h2 class="text-lg font-semibold mb-1 text-yellow-700">
+                        Desarrollador Frontend · Tencoparque
                     </h2>
-                    <p>Trabajé en proyectos de frontend con tecnologías modernas, enfocado en la creación de interfaces interactivas y optimización de la experiencia de usuario.</p>
-                    <ul class="list-disc list-inside space-y-2">
+                    <p class="text-sm text-gray-600 mb-4">
+                        Creación de interfaces interactivas y optimización de la experiencia de usuario.
+                    </p>
+
+                    <!-- Lista de responsabilidades -->
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
                         <li>Análisis de requerimientos y documentación de requisitos funcionales y no funcionales.</li>
                         <li>Desarrollo de sistemas adaptados a las necesidades del cliente, implementando componentes reutilizables y modulares.</li>
                         <li>Pruebas exhaustivas y depuración de aplicaciones web y móviles híbridas, garantizando un funcionamiento óptimo.</li>
                     </ul>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            JavaScript
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            React.js
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Vue.js
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Tailwind CSS
+                        </span>
+                        <span class="bg-yellow-200 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full">
+                            Git
+                        </span>
+                    </div>
                 </article>
+
             </div>
 
             <!-- Contenido de Personal -->
@@ -84,15 +148,44 @@
                 <!-- Slider -->
                 <div class="flex space-x-4 overflow-x-scroll scrollbar-hide mt-6">
                     <!-- Proyecto 1 -->
-                    <article class="relative bg-white shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
+                    <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200">
+                        <!-- Etiqueta decorativa -->
+                        <span class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold py-1 px-3 rounded-bl-lg">
+                            Proyecto finalizado
+                        </span>
+                        <!-- Contenido del artículo -->
+                        <h3 class="text-lg font-semibold mb-2 text-yellow-700 text-center">Desarrollo Web para Agenxi</h3>
+                        <p class="text-gray-700 text-justify">Implementé y desarrollé la página oficial de Agenxi a partir de un mockup proporcionado, enfocándome en la optimización UX/UI y asegurando un diseño moderno y funcional.</p>
+                        <!-- Tecnologías utilizadas -->
+                        <div class="flex justify-center mt-4 gap-4">
+                            <div class="bg-yellow-200 p-2 rounded-full">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-200 p-2 rounded-full">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="TailwindCSS" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-200 p-2 rounded-full">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-200 p-2 rounded-full">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg" alt="PHP" class="w-8 h-8">
+                            </div>
+                        </div>
+                        <!-- Enlace al proyecto -->
+                        <a href="https://agenxi.com/" target="_blank" class="text-yellow-600 font-semibold mt-4 block hover:underline text-center">
+                            Visitar página web
+                        </a>
+                    </article>
+
+                    <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
                         <!-- Etiqueta decorativa -->
                         <span class="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold py-1 px-3 rounded-bl-lg">
                             En desarrollo
                         </span>
                         <!-- Contenido del artículo -->
                         <div>
-                            <h3 class="text-lg font-semibold mb-2 text-yellow-700">Sistema de gestión de inventario para cafetería</h3>
-                            <p class="text-gray-600">Sistema de gestión para cafeterías.</p>
+                            <h3 class="text-lg font-semibold mb-2 text-yellow-700 text-center">Sistema de cafetería</h3>
+                            <p class="text-gray-700 text-justify">Sistema de gestión para cafeterías, constará de una sección para administrar el stock de los productos y contará con un proceso de facturación.</p>
                         </div>
                         <!-- Tecnologías utilizadas -->
                         <div class="flex justify-center mt-4 gap-4">
@@ -101,77 +194,80 @@
                             </div>
                         </div>
                         <!-- Botón Ver más -->
-                        <a href="https://github.com/Valcoing095/Cafeteria-web" target="_blank"  class="text-yellow-400 font-semibold mt-auto block hover:underline text-center">
-                            Github
+                        <a href="https://github.com/Valcoing095/Cafeteria-web" target="_blank" class="text-yellow-600 font-semibold mt-4 block hover:underline text-center">
+                            Ver en Github
                         </a>
                     </article>
 
-
-                    <article class="relative bg-white shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200">
+                    <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
                         <!-- Etiqueta decorativa -->
-                        <span class="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold py-1 px-3 rounded-bl-lg">
-                            Proyecto finalizado
+                        <span class="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold py-1 px-3 rounded-bl-lg">
+                            En desarrollo
                         </span>
                         <!-- Contenido del artículo -->
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700 text-center">Desarrollo Web para Agenxi</h3>
-                        <p class="text-gray-600 text-justify">Implementé y desarrollé la página oficial de Agenxi a partir de un mockup proporcionado, enfocándome en la optimización UX/UI y asegurando un diseño moderno y funcional.</p>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2 text-yellow-700 text-center">Proyecto Finazz - Versión Web</h3>
+                            <p class="text-gray-700 text-justify">Sistema para llevar seguimiento de mis gastos, préstamos y cuotas.</p>
+                        </div>
                         <!-- Tecnologías utilizadas -->
                         <div class="flex justify-center mt-4 gap-4">
-                            <div class="bg-yellow-100 p-2 rounded-full">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-8 h-8">
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="w-8 h-8">
                             </div>
-                            <div class="bg-yellow-100 p-2 rounded-full">
-                                <img src=src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="tailwind" class="w-8 h-8">
-                            </div>
-                            <div class="bg-yellow-100 p-2 rounded-full">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="CSS3" class="w-8 h-8"/>
-                            </div>
-                            <div class="bg-yellow-100 p-2 rounded-full">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg " alt="PHP" class="w-8 h-8"/>
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodeJS" class="w-8 h-8">
                             </div>
                         </div>
-                        <!-- Enlace al proyecto -->
-                        <a href="https://agenxi.com/" target="_blank" class="text-yellow-400 font-semibold mt-4 block hover:underline text-center">
-                            Visitar página web
-                        </a>
+                        <!-- Botones -->
+                        <div class="flex space-x-4 justify-center mt-4">
+                            <a href="https://finazz-web.vercel.app/" target="_blank" class="bg-yellow-600 text-white px-4 py-2 rounded-full font-semibold  inactive">
+                              Demo Front
+                            </a>
+                            <a href="https://github.com/Valcoing095/FinazzWeb" target="_blank" class="bg-yellow-600 text-white px-4 py-2 rounded-full font-semibold inactive">
+                              github
+                            </a>
+                          </div>
                     </article>
 
-
-                    <article class="bg-white shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200">
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700">Proyecto 1: Sistema de Gestión</h3>
-                        <p class="text-gray-600">Un sistema completo de gestión de inventarios desarrollado con Laravel y Vue.js.</p>
-                        <a href="#" class="text-yellow-400 font-semibold mt-2 block hover:underline">Ver más</a>
-                    </article>
-                    <article class="bg-white shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200">
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700">Proyecto 1: Sistema de Gestión</h3>
-                        <p class="text-gray-600">Un sistema completo de gestión de inventarios desarrollado con Laravel y Vue.js.</p>
-                        <a href="#" class="text-yellow-400 font-semibold mt-2 block hover:underline">Ver más</a>
-                    </article>
-                    <article class="bg-white shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200">
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700">Proyecto 1: Sistema de Gestión</h3>
-                        <p class="text-gray-600">Un sistema completo de gestión de inventarios desarrollado con Laravel y Vue.js.</p>
-                        <a href="#" class="text-yellow-400 font-semibold mt-2 block hover:underline">Ver más</a>
-                    </article>
-                    <!-- Proyecto 2 -->
-                    <article class="bg-white shadow-md rounded-lg p-6 w-72 flex-shrink-0">
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700">Proyecto 2: Plataforma de E-learning</h3>
-                        <p class="text-gray-600">Desarrollo de una plataforma educativa con Node.js y React para clases en tiempo real.</p>
-                        <a href="#" class="text-yellow-400 font-semibold mt-2 block hover:underline">Ver más</a>
-                    </article>
-                    <!-- Proyecto 3 -->
-                    <article class="bg-white shadow-md rounded-lg p-6 w-72 flex-shrink-0">
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700">Proyecto 3: Aplicación Móvil</h3>
-                        <p class="text-gray-600">Creación de una app híbrida para rastreo de envíos utilizando Ionic y Firebase.</p>
-                        <a href="#" class="text-yellow-400 font-semibold mt-2 block hover:underline">Ver más</a>
-                    </article>
-                    <!-- Proyecto 4 -->
-                    <article class="bg-white shadow-md rounded-lg p-6 w-72 flex-shrink-0">
-                        <h3 class="text-lg font-semibold mb-2 text-yellow-700">Proyecto 4: Tienda Online</h3>
-                        <p class="text-gray-600">Desarrollo de una tienda online con pasarela de pagos integrada utilizando Shopify.</p>
-                        <a href="#" class="text-yellow-400 font-semibold mt-2 block hover:underline">Ver más</a>
+                    <article class="relative bg-yellow-50 shadow-2xl rounded-2xl p-6 w-72 flex-shrink-0 border border-gray-200 flex flex-col justify-between">
+                        <!-- Etiqueta decorativa -->
+                        <span class="absolute top-0 right-0 bg-yellow-600 text-white text-xs font-bold py-1 px-3 rounded-bl-lg">
+                            En desarrollo
+                        </span>
+                        <!-- Contenido del artículo -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2 text-yellow-700 text-center">Proyecto Finazz - API</h3>
+                            <p class="text-gray-700 text-justify">
+                                API que realiza la conexión con el sistema web del proyecto Finazz para llevar seguimiento de mis gastos, préstamos y cuotas.
+                            </p>
+                        </div>
+                        <!-- Tecnologías utilizadas -->
+                        <div class="flex justify-center mt-4 gap-4">
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="Nestjs" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="Postgresql" class="w-8 h-8">
+                            </div>
+                            <div class="bg-yellow-100 p-2 rounded-full shadow-md">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Nodejs" class="w-8 h-8">
+                            </div>
+                        </div>
+                        <!-- Botón Ver más -->
+                        <div class="flex justify-center mt-6">
+                            <a href="https://github.com/Valcoing095/FinazzWeb" target="_blank" class="bg-yellow-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-yellow-700">
+                                GitHub
+                            </a>
+                        </div>
                     </article>
                 </div>
             </div>
+        </section>
+        <br>
+        <section class="mt-6 text-center">
+            <h1 class="text-3xl font-bold inline-block border-b-4 border-yellow-100 hover:border-yellow-400 px-4">
+                Estudios
+            </h1>
         </section>
     </div>
     <style>
