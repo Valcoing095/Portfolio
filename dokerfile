@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g npm@11.0.0 # Instala la versión específica de npm compatible
+    && npm install -g npm@11.0.0
 
 # Instala Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -28,14 +28,8 @@ RUN composer install --no-dev --optimize-autoloader
 # Instala las dependencias de Node.js y compila los activos
 RUN npm install && npm run build
 
-# Crea un enlace simbólico para el almacenamiento
-RUN php artisan storage:link
-
-# Genera la clave de la aplicación
-RUN php artisan key:generate
-
 # Expone el puerto 8080
 EXPOSE 8080
 
 # Comando para iniciar Laravel
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
+CMD ["/bin/sh", "-c", "cp .env.example .env && php artisan key:generate && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080"]
