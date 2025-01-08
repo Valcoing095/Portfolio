@@ -9,10 +9,9 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     gnupg \
-    && docker-php-ext-install pdo_mysql zip \
-    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g npm@latest
+    && npm install -g npm@11.0.0 # Instala la versión específica de npm compatible
 
 # Instala Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
