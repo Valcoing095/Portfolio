@@ -1,10 +1,18 @@
 # Usa una imagen base de PHP con extensiones requeridas para Laravel
 FROM php:8.2-fpm
 
-# Instala herramientas necesarias
+# Instala herramientas necesarias y Node.js
 RUN apt-get update && apt-get install -y \
-    unzip libzip-dev libpng-dev git curl \
-    && docker-php-ext-install pdo_mysql zip
+    unzip \
+    libzip-dev \
+    libpng-dev \
+    git \
+    curl \
+    gnupg \
+    && docker-php-ext-install pdo_mysql zip \
+    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm@latest
 
 # Instala Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -15,9 +23,17 @@ WORKDIR /var/www/html
 # Copia los archivos del proyecto al contenedor
 COPY . .
 
-# Instala las dependencias de PHP y compila los activos
+# Instala las dependencias de PHP
 RUN composer install --no-dev --optimize-autoloader
+
+# Instala las dependencias de Node.js y compila los activos
 RUN npm install && npm run build
+
+# Crea un enlace simbólico para el almacenamiento
+RUN php artisan storage:link
+
+# Genera la clave de la aplicación
+RUN php artisan key:generate
 
 # Expone el puerto 8080
 EXPOSE 8080
