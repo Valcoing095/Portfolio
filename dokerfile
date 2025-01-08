@@ -1,7 +1,7 @@
 # Usa una imagen base de PHP con extensiones requeridas para Laravel
 FROM php:8.2-fpm
 
-# Instala herramientas necesarias y Node.js
+# Instala herramientas necesarias, extensiones de PHP y Node.js
 RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
@@ -9,7 +9,13 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     gnupg \
-    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    libonig-dev \
+    libxml2-dev \
+    default-mysql-client \
+    && docker-php-ext-install pdo_mysql zip bcmath
+
+# Instala Node.js y npm
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@11.0.0
 
