@@ -31,18 +31,14 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install && npm run build
 
-# Copia el archivo .env de ejemplo y desactiva la base de datos
-RUN cp .env.example .env && sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/' .env && \
-    sed -i 's/DB_DATABASE=laravel/DB_DATABASE=:memory:/' .env
-
-# Genera la clave de la aplicación
+# Limpia los assets y genera la clave de la aplicación
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
 RUN php artisan key:generate
 
-# Limpia los assets
-RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
+# Expone el puerto de PHP-FPM
+EXPOSE 9000
 
-# Expone el puerto 8080
-EXPOSE 8080
-
-# Comando para iniciar Laravel
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
+# Comando para iniciar PHP-FPM
+CMD ["php-fpm"]
