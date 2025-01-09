@@ -27,15 +27,23 @@ WORKDIR /var/www/html
 # Copia los archivos del proyecto al contenedor
 COPY . .
 
-# Instala las dependencias de PHP y Node.js
-RUN composer install --no-dev --optimize-autoloader
-RUN npm install && npm run build
+# Establece permisos para los directorios de Laravel
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Limpia los assets y genera la clave de la aplicación
+# Instala las dependencias de PHP
+RUN composer install --no-dev --optimize-autoloader
+
+# Crea el archivo .env si no existe
+RUN cp .env.example .env || true
+
+# Genera la clave de la aplicación
+RUN php artisan key:generate
+
+# Limpia los caches de Laravel
 RUN php artisan config:cache
 RUN php artisan route:cache
 RUN php artisan view:cache
-RUN php artisan key:generate
 
 # Expone el puerto de PHP-FPM
 EXPOSE 9000
