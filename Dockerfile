@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     libonig-dev \
     libxml2-dev \
-    && docker-php-ext-install zip bcmath
+    && docker-php-ext-install zip bcmath pdo_mysql
 
 # Instala Node.js y npm
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
@@ -27,7 +27,7 @@ WORKDIR /var/www/html
 # Copia los archivos del proyecto al contenedor
 COPY . .
 
-# Establece permisos para los directorios de Laravel
+# Configura permisos para Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
@@ -45,7 +45,7 @@ RUN php artisan config:cache
 RUN php artisan route:cache
 RUN php artisan view:cache
 
-# Expone el puerto de PHP-FPM
+# Expone el puerto para PHP-FPM
 EXPOSE 9000
 
 # Comando para iniciar PHP-FPM
