@@ -11,8 +11,7 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     libonig-dev \
     libxml2-dev \
-    default-mysql-client \
-    && docker-php-ext-install pdo_mysql zip bcmath
+    && docker-php-ext-install zip bcmath pdo_mysql
 
 # Instala Node.js y npm
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
@@ -28,14 +27,26 @@ WORKDIR /var/www/html
 # Copia los archivos del proyecto al contenedor
 COPY . .
 
+# Configura permisos para Laravel
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
 # Instala las dependencias de PHP
 RUN composer install --no-dev --optimize-autoloader
 
-# Instala las dependencias de Node.js y compila los activos
-RUN npm install && npm run build
+# Crea el archivo .env si no existe
+RUN cp .env.example .env || true
 
-# Expone el puerto 8080
-EXPOSE 8080
+# Genera la clave de la aplicación
+RUN php artisan key:generate
 
-# Comando para iniciar Laravel
-CMD ["/bin/sh", "-c", "cp .env.example .env && php artisan key:generate && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080"]
+# Limpia los caches de Laravel
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
+
+# Expone el puerto para PHP-FPM
+EXPOSE 9000
+
+# Comando para iniciar PHP-FPM
+CMD ["php-fpm"]
