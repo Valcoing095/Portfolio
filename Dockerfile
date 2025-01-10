@@ -39,7 +39,7 @@ RUN cp .env.example .env && sed -i 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/'
 RUN php artisan key:generate
 
 # Limpia los assets
-RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
+RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear && php artisan optimize:clear
 
 # Expone el puerto 8080
 EXPOSE 8080

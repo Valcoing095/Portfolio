@@ -6,7 +6,7 @@
     <title>Yeison Velasco</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex lg:flex-row h-screen font-serif">
+<body class="flex lg:flex-row h-screen font-serif rugged-background">
     <!-- Header para pantallas pequeñas -->
     <header class="bg-yellow-400 text-white p-4 fixed top-0 left-0 w-full flex items-center justify-between z-10 lg:hidden">
         <h1 class="text-lg font-bold">Yeison Alexis Velasco Trejos</h1>
